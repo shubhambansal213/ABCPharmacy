@@ -1,0 +1,16 @@
+## Build artifacts
+**/bin/
+**/obj/
+
+## Node
+**/node_modules/
+**/dist/
+
+## Generated runtime data (regenerated automatically with seed data on first run)
+PharmacyApi/Data/medicines.json
+PharmacyApi/Data/sales.json
+
+## OS / editor
+.vs/
+.vscode/
+*.user

@@ -1,0 +1,218 @@
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* ---- Add Medicine Form ---- */
+.add-medicine-form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 32px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  gap: 4px;
+}
+
+.notes-field {
+  grid-column: span 3;
+}
+
+.form-grid input,
+.form-grid textarea {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-weight: normal;
+}
+
+button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #999;
+}
+
+button.secondary:hover {
+  background: #777;
+}
+
+.form-error {
+  color: #b91c1c;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ---- List Section ---- */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.search-box {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 260px;
+}
+
+.list-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.actions-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-button {
+  background: transparent;
+  padding: 4px 8px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.icon-button:hover {
+  background: #e5e7eb;
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.legend-item {
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* ---- Medicine Grid ---- */
+.medicine-grid {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-grid th,
+.medicine-grid td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.medicine-grid th {
+  background: #f1f5f9;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+
+.row-expiring {
+  background-color: #fecaca;
+}
+
+.row-low-stock {
+  background-color: #fef08a;
+}
+
+/* When a medicine is both expiring soon and low on stock, show both signals
+   instead of letting one color hide the other. */
+.row-expiring.row-low-stock {
+  background: linear-gradient(to right, #fecaca 50%, #fef08a 50%);
+}
+
+.empty-message {
+  padding: 16px;
+  text-align: center;
+  color: #777;
+}
+
+/* ---- Sale Dialog ---- */
+.dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 320px;
+}
+
+.dialog-wide {
+  width: 600px;
+  max-width: 90vw;
+}
+
+.dialog label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dialog input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dialog-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}

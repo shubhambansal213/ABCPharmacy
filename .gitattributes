@@ -1,0 +1,4 @@
+# Keep script line endings correct regardless of the cloning OS
+*.sh  text eol=lf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
